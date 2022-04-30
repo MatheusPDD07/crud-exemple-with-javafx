@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="506.0" prefWidth="600.0" style="-fx-background-color: #ffe4c4;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlle.ContasController">
+   <children>
+      <MenuBar prefHeight="29.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#informação" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="56.0" layoutY="92.0" prefHeight="57.0" prefWidth="488.0" text="task management" textAlignment="CENTER">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblContas" layoutX="56.0" layoutY="183.0" prefHeight="140.0" prefWidth="488.0">
+        <columns>
+          <TableColumn fx:id="clConsc" prefWidth="143.0" text="NAME" />
+          <TableColumn fx:id="clDesc" prefWidth="157.0" text="DESCRIPTION" />
+            <TableColumn fx:id="clVenc" prefWidth="187.0" text="DATE" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtConsc" layoutX="21.0" layoutY="382.0" prefHeight="25.0" prefWidth="139.0" />
+      <TextField fx:id="txtDesc" layoutX="177.0" layoutY="382.0" prefHeight="25.0" prefWidth="146.0" />
+      <DatePicker fx:id="dpVencimento" layoutX="343.0" layoutY="382.0" />
+      <Button fx:id="btnSalvar" layoutX="99.0" layoutY="439.0" mnemonicParsing="false" onAction="#salvar" text="salvar" />
+      <Button fx:id="btnAtualizar" layoutX="201.0" layoutY="439.0" mnemonicParsing="false" onAction="#atualizar" text="atualizar" />
+      <Button fx:id="btnApagar" layoutX="323.0" layoutY="439.0" mnemonicParsing="false" onAction="#apagar" text="apagar" />
+      <Button fx:id="btnLimpart" layoutX="435.0" layoutY="439.0" mnemonicParsing="false" onAction="#limpar" text="limpar" />
+   </children>
+</AnchorPane>
